@@ -414,7 +414,8 @@ margin-right: 50px;
    fill: white;
 }
 /* Clients */
-.clients {
+.clients-conteiner {
+  
    align-items: center;
 }
 .h2-clients {
@@ -433,8 +434,9 @@ margin-right: 50px;
    display: flex;
    gap: 30px;
    margin-bottom: 94px;
+   margin-left: 365px;
    list-style: none;
-   margin-left: 215px;
+  
 }
 .clients-items {
    width: 170px;
@@ -539,6 +541,7 @@ margin-right: 50px;
    letter-spacing: 0.03em;
    text-transform: uppercase;
    color: #FFFFFF;
+   margin-top: 15px;
    margin-bottom: 20px;
 }
 .social-list-footer {
