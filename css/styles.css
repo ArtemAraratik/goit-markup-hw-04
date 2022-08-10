@@ -164,6 +164,7 @@ margin-right: 50px;
     text-decoration: none;
     color: #757575;
     font-weight: 500;
+    display: flex;
   }
   .header-contact-link:hover, .header-contact-link:focus {
     color:var(--logo-web-color);
@@ -171,11 +172,9 @@ margin-right: 50px;
 
 .icon {
   margin-right: 10px;
-  fill: #757575;
+  fill: currentColor;
 }
-.icon:hover, .icon:focus {
-   fill: var(--logo-web-color);
-}
+
 .smartphone {
    width: 10px;
    height: 16px;
@@ -191,9 +190,13 @@ margin-right: 50px;
 
  .hero {  
    background-image: 
-   /* linear-gradient(to right,rgba(13, 25, 153, 0.4)), */
-   url(../images/hw4/herobackground.jpg); 
+   linear-gradient(to right,rgba(47, 48, 58, 0.4), rgba(255, 255, 255, 0.4)),   url(../images/hw4/herobackground.jpg); 
    background-color: var(--footer-background-color);
+   min-width: 600px;
+   min-height: 600px;
+   margin: 0 auto;
+   background-size: cover;
+   background-position: center;
    padding: 200px 0;
    text-align: center;    
  }
@@ -281,10 +284,11 @@ margin-right: 50px;
    color: #757575;
  }
  .icon-credo {   
-   width: 300px;
-   height: 150px;
+   width: 70px;
+   height: 70px;   
+   margin-left: 100px;
    margin-top: 25px;
-   margin-left: 25px;;
+
 
  }
  .credo-box-icon {
@@ -380,39 +384,40 @@ margin-right: 50px;
    padding-bottom: 30px;
  }
  .social-list {
-   margin-left: 32px;
    margin-top: 16px;
    gap: 10px;
    display: flex;
-   list-style: none;
+   justify-content: center;
+   
  }
- .social-btn {
+ .social-link {
    background-color: #fff;
    width: 44px;
    height: 44px;
-   border: none;
+   border-radius: 50%;
+   color: #AFB1B8;
+   display: flex;
+   align-items: center;
+   justify-content: center;
  }
  .social-icon {
    width:20px;
    height: 20px;
-   fill: #afb1b8;
+   fill:currentColor;
 }
-.social-btn:hover {
+.social-link:hover {
+   border-radius: 50%;
+   color:#FFFFFF;
+   background: #2196F3;
+  
+}
+.social-link:focus {
    border-radius: 50%;
    background: #2196F3;
-   cursor: pointer;
+   color: #FFFFFF;
+  
 }
-.social-btn:focus {
-   border-radius: 50%;
-   background: #2196F3;
-   cursor: pointer;
-}
-.social-icon:hover {
-   fill: white;
-}
-.social-icon:focus {
-   fill: white;
-}
+
 /* Clients */
 .clients-conteiner {
   
@@ -423,39 +428,40 @@ margin-right: 50px;
    font-style: normal;
    font-weight: 700;
    font-size: 36px;
-   line-height: 42px;
+   line-height: 1.88;
    text-align: center;
    letter-spacing: 0.03em;
    color: #212121;
-   margin-top: 94px;
    margin-bottom: 50px;
 }
 .clients-list {
    display: flex;
    gap: 30px;
-   margin-bottom: 94px;
-   margin-left: 365px;
    list-style: none;
   
 }
-.clients-items {
+.client-link {
    width: 170px;
    height: 92px;
+   color:  #AFB1B8;
    border: 1px solid #AFB1B8;
    border-radius: 4px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
 }
 .clients-icon {
    width: 106px;
    height: 60px;
-   margin-left: 32px;
-   margin-top: 16px;
-   fill: #AFB1B8;
+   fill:currentColor;
 }
-.clients-items:hover  {
+.client-link:hover  {
    border: 1px solid #2196F3;
+   color: #2196F3;
 }
-.clients-icon:hover {
-   fill: #2196F3;
+.client-link:focus{
+   border: 1px solid #2196F3;
+   color: #2196F3;
 }
  /* fotter */
  footer {
@@ -466,23 +472,11 @@ margin-right: 50px;
  }
  .footer-conteiner {
    display: flex;
+   align-items: baseline;
    box-sizing: border-box;
    
  }
- .logo-web-footer, .address-list {
 
-   list-style: none;
- }
- footer>.container>.logo-web-footer {
-   font-family: 'Raleway';
-   font-style: normal;
-   font-weight: 700;
-   font-size: 26px;
-   line-height: 1.19;
-   letter-spacing: 0.03em;
-   color: #2196F3;
-   text-decoration: none;
- }
  .address-items:not(:last-child) {
    margin-bottom: 9px;
  }
@@ -547,23 +541,27 @@ margin-right: 50px;
 .social-list-footer {
    display: flex;
    gap: 10px;
-   list-style: none;
+  
 }
-.social-btn-footer {
+.social-link-footer {
    background-color: rgba(255, 255, 255, 0.1);
-   fill: #fff;
+   fill: #ffffff;
    border-radius: 50%;
-   border: none;
    width: 44px;
    height: 44px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
 }
 .social-icon-footer {
    width: 20px;
    height: 20px;
+   fill: currentColor;
 }
-.social-btn-footer:hover {
+.social-link-footer:hover {
    background-color: #2196F3;
-   cursor: pointer;
+   color: #FFFFFF;
+   
 }
 /* portfolio */
 .portfolio-fillter {
