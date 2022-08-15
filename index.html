@@ -43,7 +43,7 @@
     <section class="hero">
        <div class="container hero-container">
          <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
-        <button type="button" class="take-to-work-btn">Заказать услугу</button>
+        <button type="button" class="take-to-work-btn" data-modal-open>Заказать услугу</button>
        </div>
     </section>
     <section class="credo-block section">
@@ -359,5 +359,15 @@
       </div>
      </div>     
 </footer>
+<div class="backdrop is-hidden" data-modal>
+    <div class="modal">
+        <button type="button" class="modal-close" data-modal-close>
+            <svg class="close-icon">
+                <use href="./images/hw4/svg/X.svg#icon-close-black-18dp"></use>
+            </svg>
+        </button>
+    </div>
+</div>
+<script src="./js/modal.js"></script>
 </body>
 </html>
