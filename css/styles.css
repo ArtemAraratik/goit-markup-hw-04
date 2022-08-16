@@ -126,6 +126,7 @@ img {
 }
 .nav-item:not(:last-child){
 margin-right: 50px; 
+position: relative;
 }
 .nav-link {
     font-family: 'Roboto';
@@ -136,6 +137,15 @@ margin-right: 50px;
     letter-spacing: 0.02em;
     color: #000000;
     text-decoration: none;
+}
+.nav-link.current::after {
+   content: "";
+   display: block;
+   position: absolute;
+   width: 100%;
+   height: 4px;
+   background-color: #2196F3;
+   top: 44px;
 }
 .nav-list>.nav-item:last-child {
    margin-right: 0;
@@ -623,10 +633,10 @@ margin-right: 50px;
    height: 100%;
    background-color: rgba(33, 150, 243, 0.9);
    opacity: 0;
+   transform: translateY(295px);
+   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.portfolio-thumb:hover::before {
-   opacity: 1;
-}
+
 .portfolio-phototext-box {
    width: 370px;
    height: 294px;
@@ -634,7 +644,10 @@ margin-right: 50px;
    top: 50%;
    left: 50%;
    transform: translate(-50%, -50%);
-   opacity: 0;
+   
+   /* transform: translateY(100px);
+   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1); */
+   
 }
 .portfolio-phototext{
    width: 322px;
@@ -649,9 +662,18 @@ margin-right: 50px;
    font-weight: 400;
    font-size: 18px;
    line-height: 156%;
-   letter-spacing: 0.03em;   
+   letter-spacing: 0.03em; 
+   opacity: 0; 
+   transform: translateY(295px);
+   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 }
-.portfolio-link:hover .portfolio-phototext-box {
+.portfolio-link:hover .portfolio-phototext {
+   
+   transform: translateY(0);
+   opacity: 1;
+}
+.portfolio-link:hover .portfolio-thumb::before {
+   transform: translateY(0);
    opacity: 1;
 }
 .backdrop {
@@ -660,7 +682,7 @@ margin-right: 50px;
    width: 100%;
    height: 100%;
    background-color: rgba(0, 0, 0, 0.2);
-   transition: opacity 500ms linear, visibility 500ms linear ;
+   transition: opacity 250ms linear, visibility 250ms linear ;
 }
 .modal {
    position: absolute;
